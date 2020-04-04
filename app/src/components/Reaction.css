@@ -6,7 +6,7 @@
 
     transform: translate(-50%, -50%);
 
-    animation: reaction 1s linear forwards;
+    animation: reaction .8s linear forwards;
 }
 
 @keyframes reaction {
