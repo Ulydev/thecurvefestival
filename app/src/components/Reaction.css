@@ -1,0 +1,29 @@
+.reaction {
+    /* add animation */
+
+    width: 40px;
+    height: 40px;
+
+    transform: translate(-50%, -50%);
+
+    animation: reaction 1s linear forwards;
+}
+
+@keyframes reaction {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, calc(-50% - 0px)) scale(0.4);
+    }
+    30% {
+        opacity: 1;
+        transform: translate(-50%, calc(-50% - 30px)) scale(1.0);
+    }
+    70% {
+        opacity: 1;
+        transform: translate(-50%, calc(-50% - 60px)) scale(1.0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, calc(-50% - 90px)) scale(0.4);
+    }
+}
