@@ -1,6 +1,7 @@
 import { createStore } from "react-hooks-global-state"
 
 import ClickEvent from "./interaction/ClickEvent"
+import GlobalStateEvent from "./interaction/GlobalStateEvent"
 
 const reducer = (state, action) => {
     // define actions
@@ -12,6 +13,12 @@ const reducer = (state, action) => {
                     return {
                         ...state,
                         clicks: [ ...state.clicks, event]
+                    }
+                }
+                case GlobalStateEvent.type: {
+                    return {
+                        ...state,
+                        ...event.data
                     }
                 }
                 default: {
@@ -44,7 +51,10 @@ const reducer = (state, action) => {
 
 const initialState = {
     // define initial state
-    clicks: []
+    clicks: [],
+
+    viewersCount: 0,
+    hostName: "None"
 }
 
 const { dispatch, useGlobalState } = createStore(reducer, initialState)
