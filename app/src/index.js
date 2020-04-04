@@ -8,6 +8,9 @@ import "./styles/position.css"
 import "./styles/flex.css"
 // add global styles files here
 
+import { interactionController as interaction } from "./interaction/InteractionController"
+interaction.connect()
+
 ReactDOM.render(
     <React.StrictMode>
         <App />
