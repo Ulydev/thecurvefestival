@@ -27,7 +27,7 @@ const FullscreenStream = () => {
     return (
         <YouTube
             id="fullscreen-stream"
-            //className=""
+            className="pointer-events-none"
             videoId={christianLofferStream /* TODO: change video id */}
             opts={opts}
         />
