@@ -1,9 +1,11 @@
 import React from "react"
 
+import FullscreenStream from "./FullscreenStream"
+
 const App = () => {
     return (
         <div id="app">
-            Ok
+            <FullscreenStream />
         </div>
     )
 }
