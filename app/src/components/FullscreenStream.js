@@ -18,8 +18,8 @@ const FullscreenStream = () => {
 			fs: 0,
 			iv_load_policy: 3,
 			modestbranding: 1,
-			rel: 0,
-            showinfo: 0,
+            rel: 0,
+            showinfo: 0, // NOTE: parameter is disabled (https://developers.google.com/youtube/player_parameters#release_notes_08_23_2018)
             modestbranding: 1
 		}
 	}
