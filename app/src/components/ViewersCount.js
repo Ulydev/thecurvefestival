@@ -1,8 +1,12 @@
 import React from "react"
 
+import "./ViewersCount.css"
+
 const ViewersCount = () => {
     return (
-        null
+        <div id="viewers-count">
+            XXX viewers
+        </div>
     )
 }
 

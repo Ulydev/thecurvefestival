@@ -1,8 +1,12 @@
 import React from "react"
 
+import "./StreamInformation.css"
+
 const StreamInformation = () => {
     return (
-        null
+        <div id="stream-information">
+            Stream information
+        </div>
     )
 }
 

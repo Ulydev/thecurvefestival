@@ -1,8 +1,12 @@
 import React from "react"
 
+import "./DonationForm.css"
+
 const DonationForm = () => {
     return (
-        null
+        <div id="donation-form">
+            Donate
+        </div>
     )
 }
 
