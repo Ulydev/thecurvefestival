@@ -1,11 +1,16 @@
 import React from "react"
 
+import { useGlobalState } from "../state"
+
 import "./ViewersCount.css"
 
 const ViewersCount = () => {
+
+    const [count] = useGlobalState("viewersCount")
+
     return (
         <div id="viewers-count">
-            XXX viewers
+            {count} viewers
         </div>
     )
 }
