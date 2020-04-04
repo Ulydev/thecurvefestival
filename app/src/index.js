@@ -4,6 +4,7 @@ import App from "./components/App"
 
 import "./styles/index.css"
 import "./styles/cursor.css"
+import "./styles/position.css"
 // add global styles files here
 
 ReactDOM.render(
