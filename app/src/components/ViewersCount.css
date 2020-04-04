@@ -5,4 +5,14 @@
 
     background-color: black;
     color: white;
+
+    padding: 8px;
+    padding-right: 16px;
+}
+
+#viewers-count img {
+    width: 32px;
+    height: 32px;
+
+    margin-right: 32px;
 }
