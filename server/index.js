@@ -1,7 +1,18 @@
-const express = require('express')
-const app = express()
+const express = require("express")
+const expressWS = require("express-ws")(express)
+const app = expressWS.app
 const port = 3001
 
-app.get('/', (req, res) => res.send('Hello World!'))
+const appWSServer = expressWS.getWss("/")
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+app.ws("/", (ws, req) => {
+    console.log("* socket connected")
+
+    // broadcast
+    ws.onmessage = msg => {
+        console.log(msg.data)
+        appWSServer.clients.forEach(client => client.send(msg.data))
+    }
+})
+
+app.listen(port, () => console.log(`* app listening at http://localhost:${port}`))
