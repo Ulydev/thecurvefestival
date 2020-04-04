@@ -43,7 +43,7 @@ WebSocketClient.prototype.send = function(data,option){
 }
 WebSocketClient.prototype.reconnect = function(e){
 	console.log(`WebSocketClient: retry in ${this.autoReconnectInterval}ms`,e);
-        this.instance.removeAllListeners();
+        // this.instance.removeAllListeners(); // no need since assigning directly listeners
 	var that = this;
 	setTimeout(function(){
 		console.log("WebSocketClient: reconnecting...");
