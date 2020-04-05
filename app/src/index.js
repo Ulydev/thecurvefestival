@@ -2,6 +2,8 @@ import React from "react"
 import ReactDOM from "react-dom"
 import App from "./components/App"
 
+import "./mobilecheck"
+
 import "./styles/index.css"
 import "./styles/cursor.css"
 import "./styles/position.css"

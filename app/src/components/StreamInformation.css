@@ -1,10 +1,16 @@
 #stream-information {
     position: absolute;
-    top: 32px;
+    top: 90px;
     left: 32px;
 
     background-color: black;
     color: white;
 
     padding: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+    #stream-information {
+        top: 32px;
+    }
 }

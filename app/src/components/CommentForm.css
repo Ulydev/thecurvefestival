@@ -2,10 +2,20 @@
     position: absolute;
     
     bottom: 32px;
-    right: 32px;
+
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 64px);
 
     background-color: transparent;
     color: white;
+}
 
-    width: 400px;
+@media only screen and (min-width: 768px) {
+    #comment-form {
+        left: initial;
+        right: 32px;
+        width: 400px;
+        transform: none;
+    }
 }
