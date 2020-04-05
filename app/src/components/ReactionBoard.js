@@ -7,6 +7,7 @@ import Position from "../interaction/Position"
 import { interactionController as interaction } from "../interaction/InteractionController"
 
 import Reaction from "./Reaction"
+import Comment from "./Comment"
 
 import "./ReactionBoard.css"
 
@@ -19,11 +20,18 @@ const sendClick = event => {
 const ReactionBoard = () => {
 
     const [clicks] = useGlobalState("clicks")
+    const [comments] = useGlobalState("comments")
 
     return (
         <div id="reaction-board" onClick={sendClick}>
             {clicks.map(event => (
                 <Reaction
+                    key={event.id}
+                    event={event}
+                />
+            ))}
+            {comments.map(event => (
+                <Comment
                     key={event.id}
                     event={event}
                 />
