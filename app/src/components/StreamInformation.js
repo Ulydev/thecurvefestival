@@ -9,7 +9,7 @@ const StreamInformation = () => {
     const [hostName] = useGlobalState("hostName")
 
     return (
-        <div id="stream-information">
+        <div id="stream-information" className="border-top-left border-bottom-right z-inherit">
             Now hosting: {hostName}
         </div>
     )

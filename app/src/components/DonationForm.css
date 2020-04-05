@@ -2,10 +2,7 @@
     position: absolute;
     
     bottom: 32px;
-    left: 50%;
+    left: 32px;
 
-    transform: translateX(-50%);
-
-    background-color: black;
     color: white;
 }
