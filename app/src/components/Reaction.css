@@ -1,5 +1,5 @@
 .reaction {
-    /* add animation */
+    z-index: 5;
 
     width: 40px;
     height: 40px;
