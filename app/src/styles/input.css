@@ -16,3 +16,9 @@ button {
 
     font-weight: bolder;
 }
+
+.input-prefix {
+    padding-left: 10px;
+    padding-right: 8px;
+    background-color: black;
+}

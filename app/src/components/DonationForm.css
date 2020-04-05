@@ -5,4 +5,14 @@
     left: 32px;
 
     color: white;
+
+    width: 260px;
+}
+
+#donation-form input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    width: 100%;
 }

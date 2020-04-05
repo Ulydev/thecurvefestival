@@ -24,7 +24,7 @@ const CommentForm = () => {
     }
 
     return (
-        <div id="comment-form" className="z-inherit flex flex-1">
+        <div id="comment-form" className="z-inherit flex">
             <form onSubmit={handleSubmit} className="flex flex-1">
                 <input
                     className="flex-1 border-top-left"
