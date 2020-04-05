@@ -1,0 +1,30 @@
+.comment {
+    z-index: 6; /* reaction + 1 */
+
+    color: white;
+
+    transform: translate(0, -50%);
+
+    animation: comment 4s linear forwards;
+
+    pointer-events: none;
+}
+
+@keyframes comment {
+    0% {
+        opacity: 0;
+        transform: translate(0, -50%) scale(0.8);
+    }
+    10% {
+        opacity: 1;
+        transform: translate(-40px, -50%) scale(1.0);
+    }
+    90% {
+        opacity: 1;
+        transform: translate(-340px, -50%) scale(1.0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-380px, -50%) scale(0.8);
+    }
+}

@@ -1,0 +1,11 @@
+#comment-form {
+    position: absolute;
+    
+    bottom: 32px;
+    right: 32px;
+
+    background-color: transparent;
+    color: white;
+
+    width: 400px;
+}

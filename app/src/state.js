@@ -1,6 +1,7 @@
 import { createStore } from "react-hooks-global-state"
 
 import ClickEvent from "./interaction/ClickEvent"
+import CommentEvent from "./interaction/CommentEvent"
 import GlobalStateEvent from "./interaction/GlobalStateEvent"
 
 const reducer = (state, action) => {
@@ -13,6 +14,12 @@ const reducer = (state, action) => {
                     return {
                         ...state,
                         clicks: [ ...state.clicks, event]
+                    }
+                }
+                case CommentEvent.type: {
+                    return {
+                        ...state,
+                        comments: [ ...state.comments, event]
                     }
                 }
                 case GlobalStateEvent.type: {
@@ -36,6 +43,12 @@ const reducer = (state, action) => {
                         clicks: state.clicks.filter(clickEvent => clickEvent !== event)
                     }
                 }
+                case CommentEvent.type: {
+                    return {
+                        ...state,
+                        comments: state.comments.filter(commentEvent => commentEvent !== event)
+                    }
+                }
                 default: {
                     console.warn("(remove) unknown event", event)
                     return state
@@ -52,6 +65,7 @@ const reducer = (state, action) => {
 const initialState = {
     // define initial state
     clicks: [],
+    comments: [],
 
     viewersCount: 0,
     hostName: "None"

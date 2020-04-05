@@ -6,6 +6,7 @@ import WebSocketClient from "./AutoReconnectingWebSocket"
 
 import Event from "./Event"
 import ClickEvent from "./ClickEvent"
+import CommentEvent from "./CommentEvent"
 import GlobalStateEvent from "./GlobalStateEvent"
 
 class InteractionController {
@@ -21,7 +22,8 @@ class InteractionController {
         const type = parsed.type
         switch (type) {
             case ClickEvent.type:           return ClickEvent.fromMessage(data)
-            case GlobalStateEvent.type:    return GlobalStateEvent.fromMessage(data)
+            case CommentEvent.type:         return CommentEvent.fromMessage(data)
+            case GlobalStateEvent.type:     return GlobalStateEvent.fromMessage(data)
             default:                        return Event.fromMessage(data)
         }
     }
@@ -31,6 +33,7 @@ class InteractionController {
         event.id = number // for internal key ordering
         switch (event.type) {
             case ClickEvent.type:
+            case CommentEvent.type:
             case GlobalStateEvent.type:
                 return dispatch({ type: "ADD_EVENT", event })
             default: console.warn("unknown event", event)
