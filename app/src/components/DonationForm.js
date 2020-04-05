@@ -10,4 +10,4 @@ const DonationForm = () => {
     )
 }
 
-export default DonationForm
+export default React.memo(DonationForm)

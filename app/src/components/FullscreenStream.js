@@ -34,4 +34,4 @@ const FullscreenStream = () => {
     )
 }
 
-export default FullscreenStream
+export default React.memo(FullscreenStream)

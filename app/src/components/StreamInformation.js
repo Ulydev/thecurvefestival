@@ -15,4 +15,4 @@ const StreamInformation = () => {
     )
 }
 
-export default StreamInformation
+export default React.memo(StreamInformation)

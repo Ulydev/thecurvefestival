@@ -32,4 +32,4 @@ const ReactionBoard = () => {
     )
 }
 
-export default ReactionBoard
+export default React.memo(ReactionBoard)

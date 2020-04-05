@@ -17,4 +17,4 @@ const ViewersCount = () => {
     )
 }
 
-export default ViewersCount
+export default React.memo(ViewersCount)
