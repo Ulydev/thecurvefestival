@@ -1,0 +1,10 @@
+:root {
+    --border-radius: 16px;
+}
+
+.border-full { border-radius: var(--border-radius); }
+
+.border-top-left { border-top-left-radius: var(--border-radius); }
+.border-top-right { border-top-right-radius: var(--border-radius); }
+.border-bottom-left { border-bottom-left-radius: var(--border-radius); }
+.border-bottom-right { border-bottom-right-radius: var(--border-radius); }

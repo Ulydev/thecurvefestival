@@ -6,6 +6,8 @@ import "./styles/index.css"
 import "./styles/cursor.css"
 import "./styles/position.css"
 import "./styles/flex.css"
+import "./styles/input.css"
+import "./styles/border.css"
 // add global styles files here
 
 import { interactionController as interaction } from "./interaction/InteractionController"

@@ -1,2 +1,4 @@
 .absolute { position: absolute; }
 .relative { position: relative; }
+
+.z-inherit { z-index: inherit; }
