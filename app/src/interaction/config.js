@@ -1,5 +1,5 @@
 const config = {
-    WEBSOCKET_URI: "ws://fa0ca9c8.ngrok.io" // DEBUG:
+    WEBSOCKET_URI: "ws://api.curve.party"
 }
 
 export default config
