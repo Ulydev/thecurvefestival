@@ -23,7 +23,7 @@ const broadcastViewersCount = () => {
         type: "GLOBAL_STATE",
         data: {
             viewersCount: appWSServer.clients.size,
-            hostName: "Christian Löffler"
+            hostName: "OFFLINE" // TODO: dynamic host
         }
     }))
 }
