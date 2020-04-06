@@ -1,5 +1,5 @@
 const config = {
-    WEBSOCKET_URI: "ws://api.thecurvefestival.org"
+    WEBSOCKET_URI: "wss://api.thecurvefestival.org"
 }
 
 export default config
