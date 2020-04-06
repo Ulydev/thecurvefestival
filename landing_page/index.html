@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
+
+    <script src="index.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="glitch.css">
+  </head>
+  <body class="intro">
+    <img
+      id="logo"
+      src="https://cdn.glitch.com/1bfb0163-5fac-4c1f-b329-89c0c8dfcba8%2Fpokpok.png?v=1586080972322"
+    />
+    <div id="intro" class="centered in-front">
+      <div syle="display: flex; align-items: center; justify-content: center;">
+        <h1>
+          <div class="glitch" data-text="18.04.2020">18.04.2020</div>
+        </h1>
+      </div>
+    </div>
+    <div id="why" class="centered in-front">
+      <h1 style="transform: translateY(-40px);">
+        <span style="font-size: 2.4rem;">
+          <b>THE CURVE</b> IS<br/><br/>
+        </span>
+        <span>AN <b>ONLINE FESTIVAL</b></span
+        ><br />
+        <b>AGAINST</b> CORONAVIRUS<br/>
+        <br/>
+        ALL FUNDS WILL BE<br/>
+        <b>DONATED</b> TO <b>CHARITY CAMPAIGNS</b> <br/> HELPING IN THE FIGHT AGAINST <br/><b>COVID-19</b>
+      </h1>
+    </div>
+    <div id="lineup" class="centered in-front">
+      <h3>
+        <!-- AMELIE LENS <span>PABLO ESCOBAR</span><br/>
+        <span>DJ BDF</span> DAVID GUETTA<br/>
+        BORIS BREJCHA <span>N'TO</span> GLUE70<br/>
+        <br/>
+        
+        AND MORE UPCOMING ARTISTS-->
+        STAY TUNED <span>FOR THE</span> ANNOUCEMENT <br/>
+      <span>OF OUR</span> LINEUP
+      
+      </h3>
+    </div>
+    <div id="left-menu" class="in-front">
+      <a href="#" onclick="document.body.className = 'intro';">INTRO</a>
+      <a href="#" onclick="document.body.className = 'why';">WHY</a>
+      <a href="#" onclick="document.body.className = 'lineup';">LINEUP</a>
+      <a href="" style="font-family: rubinstein;">JOIN</a>
+    </div>
+    <div style="background-color: black; overflow: hidden;">
+      
+      <a-scene id="scene" vr-mode-ui="enabled: false" embedded>
+        <a-entity camera look-controls="false" position="0 1.5 0"></a-entity>
+        <a-sky color="black"></a-sky>
+        <a-circle
+          arc="360"
+          radius="1"
+          radius-tubular="0.05"
+          segments="40"
+          position="0 1.5 -2"
+          material="shader: custom; color: purple"
+          wireframe
+        ></a-circle>
+      </a-scene>
+      
+    </div>
+  </body>
+</html>
