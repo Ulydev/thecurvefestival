@@ -1,4 +1,4 @@
-# coronachella
+# The Curve Festival
 
 ## workflow
 
