@@ -8,6 +8,7 @@
     animation: comment 4s linear forwards;
 
     pointer-events: none;
+    user-select: none;
 }
 
 @keyframes comment {
