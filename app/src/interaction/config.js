@@ -1,5 +1,5 @@
 const config = {
-    WEBSOCKET_URI: "ws://api.curve.party"
+    WEBSOCKET_URI: "ws://api.thecurvefestival.org"
 }
 
 export default config
