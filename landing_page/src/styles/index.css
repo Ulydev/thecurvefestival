@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    color: var(--text-color);
+
+    font-family: "Helvetica Neue";
+
+    user-select: none;
+
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 800px) {
+    html, body {
+        font-size: 1.0rem;
+    }
+}
+
+html {
+    padding: 4px;
+    width: calc(100% - 4px * 2);
+    height: calc(100% - 4px * 2);
+
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    background-size: 200% 200%;
+    animation: 2s gradient-background alternate infinite ease-in-out;
+}
+
+body {
+    overflow: hidden;
+    background-color: rgba(var(--background-color), 1);
+}
+
+@keyframes gradient-background {
+    0%{background-position:0% 0%}
+    50%{background-position:100% 0%}
+    100%{background-position:0% 100%}
+}
+
+.fullscreen {
+    width: 100%;
+    height: 100%;
+}
+
+.gradient {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+}
+
+.neon {
+    box-shadow: 
+    0 0 2px 1px white,
+    0 0 8px 4px var(--primary-color),
+    0 0 30px 2px var(--secondary-color),
+    
+    inset 0 0 15px 2px var(--secondary-color),
+    inset 0 0 2px 1px var(--primary-color),
+    inset 0 0 2px 2px white;
+    border-radius: 2px;
+    transition: box-shadow 1s;
+}
+
+.neon-hide {
+    box-shadow: none;
+}
+
+.text-gradient {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    color: transparent;
+}

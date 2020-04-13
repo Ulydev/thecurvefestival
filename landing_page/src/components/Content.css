@@ -1,0 +1,33 @@
+#content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 10;
+
+    pointer-events: none;
+
+    width: 100%;
+}
+
+.fade-enter {
+    opacity: 0;
+    transform: translateY(0);
+}
+.fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-exit-active {
+    opacity: 0;
+    transform: translateY(-32px);
+}
+.fade-enter-active,
+.fade-exit-active {
+    transition: opacity 500ms, transform 500ms;
+}

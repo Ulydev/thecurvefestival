@@ -1,0 +1,37 @@
+#canvas-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#canvas-container {
+    width: 500px;
+    height: 500px;
+    z-index: 0;
+    transition: opacity 1s;
+
+    pointer-events: none;
+}
+
+@media screen and (min-width: 800px) {
+    #canvas-container {
+        width: 600px;
+        height: 600px;
+    }
+}
+
+#canvas-container canvas {
+    opacity: 0;
+    animation: fade-in-shader 5s forwards;
+    transition: opacity 1s;
+}
+
+@keyframes fade-in-shader {
+    from { opacity: 0; }
+    to { opacity: 0.4; }
+}
+
+.hide {
+    opacity: 0;
+}

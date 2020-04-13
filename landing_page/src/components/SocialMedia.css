@@ -1,0 +1,28 @@
+#social-media {
+    position: absolute;
+    left: 16px;
+    top: 92px;
+}
+
+#social-media .icon {
+    width: 24px;
+    height: 24px;
+
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+}
+
+#social-media .icon.facebook {
+    mask-image: url(../assets/images/facebook.svg);
+}
+
+@media screen and (min-width: 800px) {
+    #social-media {
+        right: 16px;
+        top: 16px;
+        left: initial;
+    }
+    #social-media .icon {
+        width: 32px;
+        height: 32px;
+    }
+}

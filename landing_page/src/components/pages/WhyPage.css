@@ -1,0 +1,16 @@
+#why {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: lighter;
+}
+
+#why b {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    color: transparent;
+}
+
+#why span {
+    background: transparent;
+}

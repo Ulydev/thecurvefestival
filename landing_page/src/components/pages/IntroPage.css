@@ -1,0 +1,18 @@
+#intro {
+    text-align: center;
+
+    font-family: "Lines Regular";
+}
+
+.date {
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 1rem;
+    font-weight: bold;
+}
+
+.hashtag {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1.2rem;
+}

@@ -1,0 +1,19 @@
+#lineup {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: lighter;
+}
+
+#lineup b {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    color: transparent;
+    font-family: "Lines Regular";
+    font-weight: lighter;
+    font-size: 6rem;
+}
+
+#lineup span {
+    background: transparent;
+}
