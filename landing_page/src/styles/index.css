@@ -11,7 +11,7 @@ html, body {
 
     user-select: none;
 
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -21,9 +21,8 @@ html, body {
 }
 
 html {
+    position: fixed;
     padding: 4px;
-    width: calc(100% - 4px * 2);
-    height: calc(100% - 4px * 2);
 
     background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
     background-size: 200% 200%;
@@ -31,6 +30,8 @@ html {
 }
 
 body {
+    width: calc(100% - 4px * 2);
+    height: calc(100% - 4px * 2);
     overflow: hidden;
     background-color: rgba(var(--background-color), 1);
 }
