@@ -1,7 +1,8 @@
 #social-media {
-    position: absolute;
-    left: 16px;
-    top: 92px;
+    position: fixed;
+    left: 20px;
+    top: 94px;
+    z-index: 21;
 }
 
 #social-media .icon {
@@ -9,6 +10,13 @@
     height: 24px;
 
     background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+
+    opacity: 1;
+    transition: opacity .25s;
+}
+
+#social-media .icon:hover {
+    opacity: 0.5;
 }
 
 #social-media .icon.facebook {
@@ -17,8 +25,8 @@
 
 @media screen and (min-width: 800px) {
     #social-media {
-        right: 16px;
-        top: 16px;
+        right: 24px;
+        top: 24px;
         left: initial;
     }
     #social-media .icon {

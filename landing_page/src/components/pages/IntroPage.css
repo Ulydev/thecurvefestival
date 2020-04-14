@@ -2,17 +2,43 @@
     text-align: center;
 
     font-family: "Lines Regular";
+
+    margin: auto;
 }
 
 .date {
     display: block;
-    font-size: 6rem;
+    font-size: 6em;
     letter-spacing: 1rem;
     font-weight: bold;
 }
 
 .hashtag {
     display: block;
-    font-size: 2rem;
+    font-size: 2em;
     letter-spacing: 1.2rem;
+}
+
+#intro .join {
+    display: block;
+    font-size: 2em;
+    padding: 16px 0;
+    width: 100%;
+    margin: 16px;
+    pointer-events: all;
+    color: var(--text-color);
+    transition: color .25s;
+}
+
+#intro .join:hover {
+    color: transparent;
+}
+
+#intro {
+    font-size: 2.5vw;
+}
+@media screen and (min-width: 800px) {
+    #intro {
+        font-size: 1rem;
+    }
 }

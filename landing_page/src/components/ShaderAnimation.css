@@ -22,9 +22,11 @@
 }
 
 #canvas-container canvas {
+    pointer-events: all;
     opacity: 0;
     animation: fade-in-shader 5s forwards;
-    transition: opacity 1s;
+    transition: all 1s;
+    z-index: -1;
 }
 
 @keyframes fade-in-shader {
@@ -34,4 +36,5 @@
 
 .hide {
     opacity: 0;
+    visibility: hidden;
 }

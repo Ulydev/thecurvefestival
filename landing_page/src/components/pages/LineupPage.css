@@ -1,8 +1,11 @@
 #lineup {
-    font-size: 2rem;
+    font-size: 3.4rem;
     text-transform: uppercase;
     text-align: center;
     font-weight: lighter;
+
+    user-select: text;
+    z-index: 0;
 }
 
 #lineup b {
@@ -16,4 +19,44 @@
 
 #lineup span {
     background: transparent;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li:nth-child(even) {
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+}
+ul li:nth-child(odd) {
+    font-family: "Lines Regular";
+    font-weight: normal;
+    background: linear-gradient(to top left, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+}
+
+ul li {
+    color: transparent;
+    pointer-events: all;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+
+ul li.big {
+    font-size: 1.4em;
+}
+
+ul li + li {
+    margin-top: 12px;
+}
+
+@media screen and (min-width: 800px) {
+    #lineup {
+        font-size: 2rem;
+    }
 }

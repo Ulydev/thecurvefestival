@@ -1,5 +1,5 @@
 #why {
-    font-size: 2rem;
+    font-size: 2.5vw;
     text-transform: uppercase;
     text-align: center;
     font-weight: lighter;
@@ -13,4 +13,10 @@
 
 #why span {
     background: transparent;
+}
+
+@media screen and (min-width: 800px) {
+    #why {
+        font-size: 1rem;
+    }
 }

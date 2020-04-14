@@ -1,15 +1,25 @@
 import React from "react"
 
+import { useGlobalState } from "../state"
+
 import "./Header.css"
 
 const Header = ({ children }) => {
+
+    const [route, setRoute] = useGlobalState("route")
+
     return (
         <div id="title">
-            <h1 className="gradient">
+            <div id="title-background" />
+            <a
+                href="#"
+                onClick={() => setRoute("intro")}
+                className={`gradient ${route==="intro" ? "active" : ""}`}
+            >
                 The
                 <br/>
                 Curve
-            </h1>
+            </a>
             { children }
         </div>
     )
