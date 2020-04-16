@@ -12,7 +12,7 @@ const LineupPage = () => {
                 <li>STEVANS</li>
                 <li className="big">SIM'S</li>
                 <li>LA RÉCRÉ (O'HANA)</li>
-                <li>SHANTO ET SHAIM</li>
+                <li>SANTO ET SHAIM</li>
                 <li className="big">DIMSUM</li>
                 <li>FANNY LEEB</li>
                 <li>ADRIEN TOMA</li>

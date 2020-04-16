@@ -7,6 +7,7 @@ import { useGlobalState } from "../state"
 import IntroPage from "./pages/IntroPage"
 import WhyPage from "./pages/WhyPage"
 import LineupPage from "./pages/LineupPage"
+import MediaPage from "./pages/MediaPage"
 
 import "./Content.css"
 
@@ -19,6 +20,7 @@ const Content = () => {
         case "intro": page = <IntroPage />; break
         case "why": page = <WhyPage />; break
         case "lineup": page = <LineupPage />; break
+        case "media": page = <MediaPage />; break
     }
 
     return (

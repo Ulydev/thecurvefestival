@@ -6,6 +6,8 @@
 
     user-select: text;
     z-index: 0;
+
+    padding-top: 64px;
 }
 
 #lineup b {
@@ -26,13 +28,13 @@ ul {
     padding: 0;
 }
 
-ul li:nth-child(even) {
+#lineup ul li:nth-child(even) {
     font-family: "Helvetica Neue";
     font-weight: bold;
     background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
     background-clip: text;
 }
-ul li:nth-child(odd) {
+#lineup ul li:nth-child(odd) {
     font-family: "Lines Regular";
     font-weight: normal;
     background: linear-gradient(to top left, var(--primary-color), var(--secondary-color));

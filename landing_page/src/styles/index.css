@@ -34,7 +34,11 @@ body {
     width: calc(100% - 4px * 2);
     height: calc(100% - 4px * 2);
     overflow: hidden;
-    background-color: rgba(var(--background-color), 1);
+    background-color: var(--background-color-opaque);
+}
+
+#root {
+    background: var(--background-color-opaque);
 }
 
 @keyframes gradient-background {
@@ -113,3 +117,27 @@ body {
   ::-webkit-scrollbar-thumb:hover {
     background: gray;
   }
+
+/* Text styling */
+
+p, #why ul {
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+ul {
+    margin: auto;
+}
+
+h3 {
+    text-transform: uppercase;
+
+    font-size: 3em;
+}
+
+ul li {
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+}

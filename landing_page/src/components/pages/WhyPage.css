@@ -1,8 +1,13 @@
 #why {
     font-size: 2.5vw;
-    text-transform: uppercase;
-    text-align: center;
     font-weight: lighter;
+    padding-top: 24px;
+    z-index: 0;
+    padding: 32px;
+    text-align: justify;
+    user-select: text;
+    pointer-events: all;
+    align-items: flex-start;
 }
 
 #why b {
@@ -17,6 +22,6 @@
 
 @media screen and (min-width: 800px) {
     #why {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }

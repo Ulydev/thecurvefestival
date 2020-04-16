@@ -6,7 +6,7 @@
     color: var(--text-color);
     font-size: 3.0rem;
 
-    padding: 8px;
+    padding: 4px 16px;
     margin-left: -8px;
     width: fit-content;
 
@@ -42,7 +42,7 @@
 
 }
 #menu a {
-    margin: 4px 0;
+    margin: 0;
     right: 0;
     z-index: inherit;
 }

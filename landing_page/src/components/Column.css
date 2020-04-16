@@ -1,14 +1,9 @@
 .column {
     width: auto;
     padding: 16px;
-}
-
-@media screen and (min-width: 800px) {
-    .column {
-        width: 600px;
-        padding: 0;
-        margin: auto;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .scrollable {
@@ -23,8 +18,11 @@
 }
 
 @media screen and (min-width: 800px) {
-    .scrollable {
-        width: 100%;
+    .column {
+        width: 550px;
+        padding: 0;
+        padding-bottom: 32px;
+        margin: auto;
     }
 }
 
