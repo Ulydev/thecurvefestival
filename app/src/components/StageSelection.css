@@ -1,0 +1,84 @@
+#stage-selection {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--background-color-opaque);
+
+    justify-content: space-around;
+
+    padding-top: 110px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 768px) {
+    #stage-selection {
+        padding-left: 110px;
+        padding-right: 110px;
+    }
+}
+
+.stage-selection-item {
+    position: relative;
+
+    color: white;
+
+    font-size: 3rem;
+
+    width: 100%;
+
+    z-index: 2;
+
+    background: black;
+
+    overflow: hidden;
+}
+
+.stage-selection-item + .stage-selection-item {
+    margin-top: 64px;
+}
+
+.stage-selection-item-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+
+    z-index: -100;
+
+    filter: blur(6px);
+
+    transition: all .5s;
+
+    opacity: 0.25;
+}
+
+.stage-selection-item-background-fade-in-container {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    animation: fade-in .5s forwards;
+}
+
+.stage-selection-item:nth-child(1) .stage-selection-item-background-fade-in-container { animation-delay: 1s; }
+.stage-selection-item:nth-child(2) .stage-selection-item-background-fade-in-container { animation-delay: 1.5s; }
+.stage-selection-item:nth-child(3) .stage-selection-item-background-fade-in-container { animation-delay: 2s; }
+
+.stage-selection-item:hover .stage-selection-item-background {
+    opacity: 0.75;
+    filter: blur(4px);
+}
+
+.stage-selection-item span {
+    transition: all .5s;
+}
+.stage-selection-item:hover span {
+    transform: translateY(-12px) scale(1.1);
+}
