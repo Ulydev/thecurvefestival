@@ -34,7 +34,7 @@ const LineupPage = () => {
                     <td>ADRIEN TOMA</td>
                 </tr>
                 <tr>
-                    <td>23:40</td>
+                    <td>23:00</td>
                     <td>SIKS</td>
                 </tr>
             </table>
