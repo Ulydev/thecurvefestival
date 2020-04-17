@@ -1,0 +1,28 @@
+.gradient {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+}
+
+.neon {
+    box-shadow: 
+        0 0 2px 1px white,
+        0 0 8px 4px var(--primary-color),
+        0 0 30px 2px var(--secondary-color),
+        
+        inset 0 0 15px 2px var(--secondary-color),
+        inset 0 0 2px 1px var(--primary-color),
+        inset 0 0 2px 2px white;
+        /*border-radius: 2px;
+        border-top-left-radius: 24px;
+        border-bottom-right-radius: 24px;*/
+        transition: box-shadow 1s;
+}
+
+.neon-hide {
+    box-shadow: none;
+}
+
+.text-gradient {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    color: transparent;
+}

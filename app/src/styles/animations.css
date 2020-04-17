@@ -1,0 +1,18 @@
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-in-half {
+    from { opacity: 0; }
+    to { opacity: .5; }
+}
+
+@keyframes fade-in-half-to-full {
+    from { opacity: .5; }
+    to { opacity: 1; }
+}
+
+.hide {
+    opacity: 0;
+}

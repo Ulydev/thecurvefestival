@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Lines Regular';
+    src: local('Lines Regular'), url(../assets/fonts/lines-regular-webfont.ttf) format('truetype');
+}
+
+.font-title {
+    font-family: "Lines Regular", "Helvetica Neue", sans-serif;
+}
+
+.font-text, html {
+    font-family: 'Helvetica Neue', sans-serif;
+}
