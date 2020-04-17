@@ -18,6 +18,7 @@ const broadcast = msg => {
     appWSServer.clients.forEach(client => client.send(msg))
 }
 
+/*
 const broadcastViewersCount = () => {
     broadcast(JSON.stringify({
         type: "GLOBAL_STATE",
@@ -27,18 +28,25 @@ const broadcastViewersCount = () => {
         }
     }))
 }
+*/
 
-app.ws("/", (ws, req) => {
-    console.log("* socket connected")
+const handler = (ws, req) => {
+    console.log("* socket connected on stage " + location)
+    ws.room = this.setRoom(req)
 
-    broadcastViewersCount()
-    ws.on("close", broadcastViewersCount)
+    // DEBUG: viewers count and stream information (now included directly in video)
+    /* broadcastViewersCount()
+    ws.on("close", broadcastViewersCount) */
 
     ws.on("message", msg => {
         console.log("received message", msg)
-        broadcast(msg)
+        this.broadcast(ws, msg)
     })
+}
 
-})
+// set up three different stages
+app.ws("/stage1", handler)
+app.ws("/stage2", handler)
+app.ws("/stage3", handler)
 
 app.listen(port, () => console.log(`* app listening at http://localhost:${port}`))
