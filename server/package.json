@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "@small-tech/express-ws": "https://github.com/aral/express-ws/",
+    "bad-words": "^3.0.3",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "naughty-words": "^1.1.0"
   }
 }
