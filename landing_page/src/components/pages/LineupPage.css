@@ -8,6 +8,9 @@
     z-index: 0;
 
     padding-top: 64px;
+
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #lineup b {
@@ -19,6 +22,10 @@
     font-size: 6rem;
 }
 
+#lineup table {
+    margin-bottom: 64px;
+}
+
 #lineup span {
     background: transparent;
 }
@@ -28,17 +35,44 @@ ul {
     padding: 0;
 }
 
-#lineup ul li:nth-child(even) {
+#lineup table tr td{
+    text-align: left;
+    user-select: text;
+}
+#lineup table td {
+    text-align: left;
+    margin: 0;
+}
+
+#lineup tr td:nth-child(1) {
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    font-size: 0.6em;
+    padding-right: 24px;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+}
+
+#lineup tr td:nth-child(2) {
     font-family: "Helvetica Neue";
     font-weight: bold;
     background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
     background-clip: text;
+    color: transparent;
 }
-#lineup ul li:nth-child(odd) {
+
+#lineup .scene {
     font-family: "Lines Regular";
     font-weight: normal;
     background: linear-gradient(to top left, var(--primary-color), var(--secondary-color));
     background-clip: text;
+    color: transparent;
+    margin: 0;
+    font-size: 2em;
+    text-align: left;
+    align-self: flex-start;
+    margin-bottom: 32px;
 }
 
 ul li {
