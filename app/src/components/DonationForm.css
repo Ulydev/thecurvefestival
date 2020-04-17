@@ -1,29 +1,23 @@
-#donation-form {
+#donation-button {
 
     position: absolute;
 
     top: 32px;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 64px);
 
     color: white;
+    
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 @media only screen and (min-width: 768px) {
-    #donation-form {
+    #donation-button {
         top: initial;
         left: 32px;
         bottom: 32px;
-        width: 260px;
+        width: auto;
         transform: none;
     }
-}
-
-#donation-form input {
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: 1.3rem;
-    font-weight: bolder;
-    width: 100%;
 }
