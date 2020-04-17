@@ -11,6 +11,10 @@ app.use(cors())
 // bad words moderation
 const Filter = require("bad-words")
 const filter = new Filter()
+const words = require("naughty-words")
+
+filter.addWords(...words.fr)
+filter.addWords(...["chienne", "nique"])
 
 app.get("/", (req, res) => res.send("Server is working"))
 
