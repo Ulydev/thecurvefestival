@@ -7,6 +7,12 @@ import GlobalStateEvent from "./interaction/GlobalStateEvent"
 const reducer = (state, action) => {
     // define actions
     switch (action.type) {
+        case "SET_STAGE": {
+            return {
+                ...state,
+                stage: action.stage
+            }
+        }
         case "ADD_EVENT": {
             const event = action.event
             switch (event.type) {
@@ -68,7 +74,9 @@ const initialState = {
     comments: [],
 
     viewersCount: 0,
-    hostName: "None"
+    hostName: "None",
+
+    stage: null
 }
 
 const { dispatch, useGlobalState } = createStore(reducer, initialState)
