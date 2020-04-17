@@ -10,10 +10,23 @@ import CommentEvent from "./CommentEvent"
 import GlobalStateEvent from "./GlobalStateEvent"
 
 class InteractionController {
-    connect = () => {
+    connect = (endpoint) => {
+        if (this.client) {
+            this.disconnect()
+        }
         this.client = new WebSocketClient()
-        this.client.open(config.WEBSOCKET_URI)
+        this.client.open(`${config.WEBSOCKET_URI}${endpoint}`)
         this.client.onmessage = (msg, flags, number) => this.receiveEvent(this.fromMessage(msg), flags, number)
+    }
+
+    disconnect = () => {
+        if (this.client) {
+            // force close without reconnect
+            this.client.instance.onclose = () => {}
+            this.client.instance.close()
+            console.debug("Websocket force closed")
+            this.client = null
+        }
     }
 
     fromMessage = msg => {
@@ -41,8 +54,10 @@ class InteractionController {
     }
 
     sendEvent = event => {
-        console.debug("sent event", event, event.toMessage())
-        this.client.send(event.toMessage())
+        if (this.client) {
+            console.debug("sent event", event, event.toMessage())
+            this.client.send(event.toMessage())
+        }
     }
 }
 
