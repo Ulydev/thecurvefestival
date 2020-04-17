@@ -24,10 +24,13 @@ const CommentForm = () => {
     }
 
     return (
-        <div id="comment-form" className="z-inherit flex">
+        <div
+            id="comment-form"
+            className="z-inherit flex clip-children border-top-left border-bottom-right neon"
+        >
             <form onSubmit={handleSubmit} className="flex flex-1">
                 <input
-                    className="flex-1 border-top-left"
+                    className="flex-1"
                     type="text"
                     placeholder="Say something nice!"
                     value={comment}
@@ -35,7 +38,6 @@ const CommentForm = () => {
                     maxLength="50"
                 />
                 <button
-                    className="border-bottom-right"
                     type="submit"
                 >SEND</button>
             </form>
