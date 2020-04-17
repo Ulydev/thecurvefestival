@@ -8,6 +8,10 @@ const port = 3001
 const cors = require("cors")
 app.use(cors())
 
+// bad words moderation
+const Filter = require("bad-words")
+const filter = new Filter()
+
 app.get("/", (req, res) => res.send("Server is working"))
 
 function handler(ws, req) {
@@ -16,7 +20,7 @@ function handler(ws, req) {
 
     ws.on("message", msg => {
         console.log("received message", msg)
-        this.broadcast(ws, msg, { skipSelf: false })
+        this.broadcast(ws, filter.clean(msg), { skipSelf: false })
     })
 }
 
