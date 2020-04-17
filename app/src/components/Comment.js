@@ -19,7 +19,7 @@ const Comment = ({ event }) => {
         <div
             className="absolute comment"
             style={{
-                top: window.mobilecheck() ? (120 + Math.random() * (window.innerHeight - 240)) : (32 + Math.random() * (window.innerHeight / 2 - 64)),
+                top: window.mobilecheck() ? (120 + Math.random() * (window.innerHeight - 240)) : (128 + Math.random() * (window.innerHeight - 128 * 2)),
                 right: window.mobilecheck() ? (32 + Math.random() * 80) : (32 + Math.random() * 360)
             }}
             width="64"
