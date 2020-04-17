@@ -31,8 +31,8 @@ const broadcastViewersCount = () => {
 */
 
 const handler = (ws, req) => {
-    console.log(`* socket connected on stage ${req}`)
     ws.room = this.setRoom(req)
+    console.log(`* socket connected on ${ws.room}`)
 
     // DEBUG: viewers count and stream information (now included directly in video)
     /* broadcastViewersCount()
