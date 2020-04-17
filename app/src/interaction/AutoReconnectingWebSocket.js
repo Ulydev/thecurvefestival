@@ -15,7 +15,7 @@ WebSocketClient.prototype.open = function(url){
 	this.instance.onclose = (e)=>{
 		switch (e.code){
 		case 1000:	// CLOSE_NORMAL
-			console.log("WebSocket: closed");
+			console.debug("WebSocket: closed");
 			break;
 		default:	// Abnormal closure
 			this.reconnect(e);
@@ -42,18 +42,18 @@ WebSocketClient.prototype.send = function(data,option){
 	}
 }
 WebSocketClient.prototype.reconnect = function(e){
-	console.log(`WebSocketClient: retry in ${this.autoReconnectInterval}ms`,e);
+	console.debug(`WebSocketClient: retry in ${this.autoReconnectInterval}ms`,e);
         // this.instance.removeAllListeners(); // no need since assigning directly listeners
 	var that = this;
 	setTimeout(function(){
-		console.log("WebSocketClient: reconnecting...");
+		console.debug("WebSocketClient: reconnecting...");
 		that.open(that.url);
 	},this.autoReconnectInterval);
 }
-WebSocketClient.prototype.onopen = function(e){	console.log("WebSocketClient: open",arguments);	}
-WebSocketClient.prototype.onmessage = function(data,flags,number){	console.log("WebSocketClient: message",arguments);	}
-WebSocketClient.prototype.onerror = function(e){	console.log("WebSocketClient: error",arguments);	}
-WebSocketClient.prototype.onclose = function(e){	console.log("WebSocketClient: closed",arguments);	}
+WebSocketClient.prototype.onopen = function(e){	console.debug("WebSocketClient: open",arguments);	}
+WebSocketClient.prototype.onmessage = function(data,flags,number){	console.debug("WebSocketClient: message",arguments);	}
+WebSocketClient.prototype.onerror = function(e){	console.debug("WebSocketClient: error",arguments);	}
+WebSocketClient.prototype.onclose = function(e){	console.debug("WebSocketClient: closed",arguments);	}
 
 /* USAGE:
 
