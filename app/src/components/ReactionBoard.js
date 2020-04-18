@@ -16,7 +16,7 @@ const ReactionBoard = () => {
     const [clicks] = useGlobalState("clicks")
     const [comments] = useGlobalState("comments")
     const [canSend, setCanSend] = useState(true)
-    const TIMEOUT_DELAY = 500 // 0.5 seconds
+    const TIMEOUT_DELAY = 250 // 0.25 seconds
 
     const sendClick = event => {
         if (!canSend) return // timeout
