@@ -13,6 +13,12 @@ const reducer = (state, action) => {
                 stage: action.stage
             }
         }
+        case "SET_INTERACTIONS_ENABLED": {
+            return {
+                ...state,
+                interactionsEnabled: action.interactionsEnabled
+            }
+        }
         case "ADD_EVENT": {
             const event = action.event
             switch (event.type) {
@@ -76,9 +82,10 @@ const initialState = {
     viewersCount: 0,
     hostName: "None",
 
-    stage: null
+    stage: null,
+    interactionsEnabled: true
 }
 
-const { dispatch, useGlobalState } = createStore(reducer, initialState)
+const { dispatch, useGlobalState, getState } = createStore(reducer, initialState)
 
-export { dispatch, useGlobalState }
+export { dispatch, useGlobalState, getState }
