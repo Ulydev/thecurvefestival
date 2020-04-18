@@ -18,16 +18,30 @@ filter.addWords(...["chienne", "nique"])
 
 app.get("/", (req, res) => res.send("Server is working"))
 
+const viewersCountEvent = (viewersCount) => JSON.stringify({
+    type: "GLOBAL_STATE",
+    data: {
+        viewersCount
+    }
+})
+
 function handler(ws, req) {
     ws.room = this.setRoom(req)
     console.log(`* socket connected on ${ws.room}`)
 
+    try {
+        this.broadcast(ws, viewersCountEvent(this.getWss().clients.size), { skipSelf: false, allClients: true })
+    } catch (e) {
+        console.log(e)
+    }
+
     ws.on("message", msg => {
         console.log("received message", msg)
-        this.broadcast(ws, filter.clean(msg), { skipSelf: false })
+        if (!filter.isProfane(msg)) {
+            this.broadcast(ws, filter.clean(msg), { skipSelf: false })
+        }
     })
 }
-
 // set up three different stages
 app.ws("/stage1", handler)
 app.ws("/stage2", handler)
