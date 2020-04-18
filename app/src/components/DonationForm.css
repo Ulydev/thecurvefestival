@@ -1,23 +1,16 @@
 #donation-button {
 
-    position: absolute;
-
-    top: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-
     color: white;
     
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 12px 18px;
+
+    background: var(--primary-color);
+    color: black;
+
+    transition: all .5s;
 }
 
-@media only screen and (min-width: 768px) {
-    #donation-button {
-        top: initial;
-        left: 32px;
-        bottom: 32px;
-        width: auto;
-        transform: none;
-    }
+#donation-button:hover {
+    color: white;
+    background: var(--secondary-color);
 }
