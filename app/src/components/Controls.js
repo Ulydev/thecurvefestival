@@ -6,17 +6,25 @@ import StageSelectionMinimal from "./StageSelectionMinimal"
 import DonationForm from "./DonationForm"
 import CommentForm from "./CommentForm"
 import ReactionBoard from "./ReactionBoard"
+import InteractionsToggle from "./InteractionsToggle"
 
 import "./Controls.css"
+import { useGlobalState } from "../state"
 
 const Controls = () => {
+
+    const [interactionsEnabled] = useGlobalState("interactionsEnabled")
+
     return (
         <div id="controls">
-            {/* <StreamInformation />
-            <ViewersCount /> */}
+            {/* <StreamInformation /> */}
+            <div id="top-left-anchor" className="border-top-left border-bottom-right clip-children neon">
+                { interactionsEnabled ? <ViewersCount /> : null }
+                <DonationForm />
+            </div>
             <StageSelectionMinimal />
-            <DonationForm />
-            <CommentForm />
+            <InteractionsToggle className={interactionsEnabled ? "" : "lower"} />
+            { interactionsEnabled ? <CommentForm /> : null }
             <ReactionBoard />
         </div>
     )
