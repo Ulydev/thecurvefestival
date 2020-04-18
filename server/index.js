@@ -14,8 +14,7 @@ const filter = new Filter()
 const words = require("naughty-words")
 
 filter.addWords(...words.fr)
-filter.addWords(...["chienne", "nique"])
-filter.addWords("")
+filter.addWords(...["chienne", "nique", "flep"])
 
 app.get("/", (req, res) => res.send("Server is working"))
 
@@ -38,7 +37,8 @@ function handler(ws, req) {
 
     ws.on("message", msg => {
         console.log("received message", msg)
-        if ((!filter.isProfane(msg)) && (!msg.includes("="))) {
+        if (!filter.isProfane(msg) && !msg.includes("=")) {
+            console.log("broadcasted");
             this.broadcast(ws, filter.clean(msg), { skipSelf: false })
         }
     })
