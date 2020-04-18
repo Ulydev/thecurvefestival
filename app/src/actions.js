@@ -21,7 +21,6 @@ const setInteractionsEnabled = (interactionsEnabled) => {
     // disconnect or reconnect to stage depending on interactionsEnabled
     if (interactionsEnabled) {
         const { stage } = getState("stage")
-        console.log(stage)
         connectToStage(stage)
     } else {
         interaction.disconnect()
