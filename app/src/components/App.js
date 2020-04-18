@@ -20,7 +20,10 @@ const App = () => {
             const urlParams = new URLSearchParams(queryString)
             const forceStage = urlParams.get('stage')
             if (forceStage && (forceStage !== "")) {
-                setStage(parseInt(forceStage))
+                setTimeout(
+                    () => setStage(parseInt(forceStage)),
+                    1000
+                )
             }
         } catch (e) {
             console.log("couldn't parse url params")
