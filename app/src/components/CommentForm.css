@@ -11,6 +11,16 @@
     color: white;
 }
 
+#comment-form button {
+    pointer-events: all;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#comment-form button:hover {
+    background: var(--secondary-color);
+}
+
 @media only screen and (min-width: 768px) {
     #comment-form {
         left: initial;
