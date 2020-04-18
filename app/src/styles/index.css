@@ -16,3 +16,5 @@ code {
 }
 
 textarea, select, input, button, .button { outline: none; }
+
+html, body, #root, #app { width: 100%; height: 100%; }
