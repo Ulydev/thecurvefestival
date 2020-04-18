@@ -8,7 +8,7 @@ import "./StageSelection.css"
 
 const StageSelection = () => {
 
-    const [thumbnails, setThumbnails] = useState([null, null, null])
+    const [thumbnails, setThumbnails] = useState(["", "", ""])
 
     useEffect(() => {
         const downloadThumbnails = async () => {
