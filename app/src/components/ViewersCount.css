@@ -1,19 +1,9 @@
 #viewers-count {
-    position: absolute;
-    top: 120px;
-    left: 32px;
-
     background-color: black;
     color: white;
 
     padding: 8px;
     padding-right: 16px;
-}
-
-@media only screen and (min-width: 768px) {
-    #viewers-count {
-        top: 66px;
-    }
 }
 
 #viewers-count img {

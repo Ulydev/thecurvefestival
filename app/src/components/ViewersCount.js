@@ -11,7 +11,7 @@ const ViewersCount = () => {
     const [count] = useGlobalState("viewersCount")
 
     return (
-        <div id="viewers-count" className="border-bottom-right z-inherit flex flex-row align-items-center">
+        <div id="viewers-count" className="z-inherit flex flex-row align-items-center">
             <img src={userIcon} /> {count}
         </div>
     )
