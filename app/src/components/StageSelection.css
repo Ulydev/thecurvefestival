@@ -16,8 +16,9 @@
 
 @media only screen and (min-width: 768px) {
     #stage-selection {
-        padding-left: 110px;
-        padding-right: 110px;
+        padding-top: 32px;
+        padding-left: 140px;
+        padding-right: 32px;
     }
 }
 
@@ -38,7 +39,7 @@
 }
 
 .stage-selection-item + .stage-selection-item {
-    margin-top: 64px;
+    margin-top: 32px;
 }
 
 .stage-selection-item-background {
