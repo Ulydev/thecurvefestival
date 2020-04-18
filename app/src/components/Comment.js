@@ -10,7 +10,7 @@ const Comment = ({ event }) => {
 
     useEffect(() => {
         setTimeout(() => {
-            console.debug("removed event", event)
+            //console.debug("removed event", event)
             dispatch({ type: "REMOVE_EVENT", event })
         }, 4200)
     }, []) // [] to run only once

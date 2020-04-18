@@ -42,7 +42,7 @@ class InteractionController {
     }
 
     receiveEvent = (event, flags, number) => {
-        console.debug("received event #", number, event)
+        //console.debug("received event #", number, event)
         event.id = number // for internal key ordering
         switch (event.type) {
             case ClickEvent.type:
@@ -54,8 +54,8 @@ class InteractionController {
     }
 
     sendEvent = event => {
-        if (this.client) {
-            console.debug("sent event", event, event.toMessage())
+        if (this.client && this.client.ready()) {
+            //console.debug("sent event", event, event.toMessage())
             this.client.send(event.toMessage())
         }
     }
