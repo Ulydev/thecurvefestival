@@ -34,6 +34,9 @@ WebSocketClient.prototype.open = function(url){
 		}
 	}
 }
+WebSocketClient.prototype.ready = function() {
+	return (this.instance && this.instance.readyState === WebSocket.OPEN)
+}
 WebSocketClient.prototype.send = function(data,option){
 	try{
 		this.instance.send(data,option);
