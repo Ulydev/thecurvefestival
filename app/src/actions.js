@@ -9,7 +9,7 @@ const setStage = (stage) => {
     dispatch({ type: "SET_STAGE", stage })
 
     // connect to stage only if interactions are enabled
-    const interactionsEnabled = getState("interactionsEnabled")
+    const { interactionsEnabled } = getState("interactionsEnabled")
     if (interactionsEnabled) {
         connectToStage(stage)
     }
@@ -20,7 +20,8 @@ const setInteractionsEnabled = (interactionsEnabled) => {
 
     // disconnect or reconnect to stage depending on interactionsEnabled
     if (interactionsEnabled) {
-        const stage = getState("stage")
+        const { stage } = getState("stage")
+        console.log(stage)
         connectToStage(stage)
     } else {
         interaction.disconnect()
