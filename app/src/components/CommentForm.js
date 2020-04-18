@@ -13,14 +13,18 @@ const sendComment = comment => {
 const CommentForm = () => {
 
     const [comment, setComment] = useState("")
+    const [canSend, setCanSend] = useState(true)
+    const TIMEOUT_DELAY = 1500 // 1.5 seconds
 
     const handleSubmit = (event) => {
         event.preventDefault()
 
         if (comment.length === 0) return // prevent sending empty comment
-
-        sendComment(comment)
-        setComment("")
+        if (!canSend) return // timeout
+            sendComment(comment)
+            setComment("")
+        setCanSend(false)
+        setTimeout(() => setCanSend(true), TIMEOUT_DELAY)
     }
 
     return (

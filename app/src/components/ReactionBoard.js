@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import { useGlobalState } from "../state"
 
@@ -11,16 +11,21 @@ import Comment from "./Comment"
 
 import "./ReactionBoard.css"
 
-const sendClick = event => {
-    const position = new Position(event.clientX, event.clientY)
-    const clickEvent = new ClickEvent({ position })
-    interaction.sendEvent(clickEvent)
-}
-
 const ReactionBoard = () => {
 
     const [clicks] = useGlobalState("clicks")
     const [comments] = useGlobalState("comments")
+    const [canSend, setCanSend] = useState(true)
+    const TIMEOUT_DELAY = 500 // 0.5 seconds
+
+    const sendClick = event => {
+        if (!canSend) return // timeout
+        setCanSend(false)
+            const position = new Position(event.clientX, event.clientY)
+            const clickEvent = new ClickEvent({ position })
+            interaction.sendEvent(clickEvent)
+        setTimeout(() => setCanSend(true), TIMEOUT_DELAY)
+    }
 
     return (
         <div id="reaction-board" onClick={sendClick}>
