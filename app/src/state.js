@@ -74,6 +74,8 @@ const reducer = (state, action) => {
     }
 }
 
+const iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
 const initialState = {
     // define initial state
     clicks: [],
@@ -83,7 +85,7 @@ const initialState = {
     hostName: "None",
 
     stage: null,
-    interactionsEnabled: true
+    interactionsEnabled: !iOS
 }
 
 const { dispatch, useGlobalState, getState } = createStore(reducer, initialState)

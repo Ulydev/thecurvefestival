@@ -8,6 +8,8 @@ import offlineImage from "../assets/offline.png"
 
 import config from "../interaction/config"
 
+const iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
 const FullscreenStream = ({ stage }) => {
 
     return (
@@ -15,6 +17,9 @@ const FullscreenStream = ({ stage }) => {
             <VimeoPlayer
                 className='stream-player'
                 url={config.STAGES[stage - 1]}
+                light={iOS}
+                controls={iOS}
+                playsinline={iOS}
                 width='100%'
                 height='100%'
                 config={{

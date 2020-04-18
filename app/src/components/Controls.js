@@ -16,7 +16,7 @@ const Controls = () => {
     const [interactionsEnabled] = useGlobalState("interactionsEnabled")
 
     return (
-        <div id="controls">
+        <>
             {/* <StreamInformation /> */}
             <div id="top-left-anchor" className="border-top-left border-bottom-right clip-children neon">
                 { interactionsEnabled ? <ViewersCount /> : null }
@@ -24,9 +24,13 @@ const Controls = () => {
             </div>
             <StageSelectionMinimal />
             <InteractionsToggle className={interactionsEnabled ? "" : "lower"} />
-            { interactionsEnabled ? <CommentForm /> : null }
-            <ReactionBoard />
-        </div>
+            { interactionsEnabled ? (
+                <>
+                    <CommentForm />
+                    <ReactionBoard />
+                </>
+            ) : null }
+        </>
     )
 }
 
